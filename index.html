@@ -1,0 +1,58 @@
+<!DOCTYPE html> 
+
+<html>
+        <head>
+            <meta charset="UTF-8">
+            <link rel="stylesheet" href="style.css">
+            <link href="https://fonts.googleapis.com/css2?family=Asap+Condensed:wght@500&family=Schibsted+Grotesk&display=swap" rel="stylesheet">
+            <title>ENCRIPTADOR DE TEXTO</title>
+            <link rel="icon" href="RECURSOS/encriptar.png">
+
+        </head>
+
+        <body>
+            <header>
+                <img src="RECURSOS/encriptar.png" alt="Logo Alura" class="logo">
+            </header>
+
+            <main>
+                <textarea name="name_entrada" class="entrada" id="entradaText" cols="30" rows="10" placeholder="INGRESA EL TEXTO"></textarea>
+
+                <div class="salida">
+                    <div>
+                        <textarea name="salida-text" class="salida-texto" id="salidaTexto" cols="30" rows="10"></textarea>
+                    </div>
+                    <div class="div-salida">
+                        <input type="button"  value="Copiar" name="Copiar" class="boton-copiar" id="btCopy">
+                    </div>
+                </div>
+
+                <div  class="uso-caract">
+                        <img src="RECURSOS/uso_caracteres.png" class="img-uso-caract" alt="Cuidado con el uso de uso_caracteres">
+                        <p>No ingresar letras mayusculas ni acentos </p>
+                </div>
+                
+                <div class="botones-encr-descr">
+                    <input type="button" id="btEncript" class="botones-action" value="Encriptar">
+                    <input type="button" id="btDesencript" class="botones-action2" value="Desencriptar">
+                </div>
+            </main>
+
+            <footer>
+                <div>
+                    <p> By OMAR HARO</p>
+                    <div class="redes">
+                        <a href="https://github.com/santi-haro"><img src="RECURSOS/GitHub.png" alt="GIthub"></a>
+                        <a href="https://github.com/santi-haro"><img src="RECURSOS/icons8-linkedin-50.png" alt=""></a>
+                    </div>
+                    
+                </div>
+                
+                
+            </footer>
+
+        </body>
+
+</html>
+
+<script src="code.js"></script>
