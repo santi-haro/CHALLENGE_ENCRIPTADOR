@@ -11,6 +11,8 @@ btCopiar.onclick = copiar;
 
 function Encriptar(){
 
+    //console.log(validar());
+    if (!validar()) return;
     var texto = textEntrada.value.toLowerCase();
     var textoYaEncriptado = texto
     .replaceAll("e","enter")
@@ -24,6 +26,8 @@ function Encriptar(){
 
 
 function Desencriptar(){
+    //console.log(validar());
+    if(!validar()) return;
     var texto = textEntrada.value.toLowerCase();
     var textoYaDesencriptado = texto
     .replaceAll("enter","e")
@@ -45,13 +49,22 @@ function copiar(){
 }
 
 function validar(){
+   
     var texto = textEntrada.value;
-    let letrasAceptadas = 'abcdefghijklmñopqrstuvwxyz';
-    let mensajeError = document.createDocumentFragment();
+    let letrasAceptadas = 'abcdefghijklmnñopqrstuvwxyz ';
+    let mensajeError = document.createDocumentFragment;
 
     for(let letra of texto){
-
+        if (!letrasAceptadas.includes(letra)){
+            console.log(letra + " No es aceptada");
+            alert('El caracter '+ letra + ' no es válido');
+            mensajeError = 'La letra ${letra} no es valida';
+            
+        }
     }
-
-
+    if (mensajeError.length === 0){
+        return true;
+    }
+    mensajeError = "";
+    return false;
 }
